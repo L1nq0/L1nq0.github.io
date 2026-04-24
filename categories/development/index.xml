@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development - Category - L1nq Blog</title>
+    <link>http://localhost:1313/categories/development/</link>
+    <description>L1nq Blog</description>
+    <generator>Hugo 0.160.1 &amp; FixIt v0.4.5</generator>
+    <language>en</language>
+    <copyright>2026</copyright>
+    <lastBuildDate>Fri, 24 Apr 2026 20:55:08 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>资产侦察系统灯塔ARL优化</title>
+      <link>http://localhost:1313/posts/arl-optimization/</link>
+      <pubDate>Wed, 05 Mar 2025 19:48:28 +0800</pubDate>
+      <guid>http://localhost:1313/posts/arl-optimization/</guid>
+      <category domain="http://localhost:1313/categories/development/">Development</category>
+      <description>来自 C4 安全团队的二开手记，学着自己也优化一下</description>
+    </item>
+  </channel>
+</rss>
